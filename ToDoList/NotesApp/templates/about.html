@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TODO Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: #f7f9fc;
+        }
+
+        /* Header */
+
+        header {
+            background-color: #ffffff;
+            color: #333;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #40b736;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            padding: 10px 15px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #40b736;
+            color: #ffffff;
+        }
+
+        /* About Section */
+
+        .about {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 120px 0 40px;
+            text-align: center;
+            margin-top: 80px; /* To avoid content overlapping with fixed header */
+        }
+
+        .about h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-info {
+            margin: 2rem auto;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-info p {
+            font-size: 1.2rem;
+            margin: 0 1.5rem;
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            padding: 12px 24px;
+            margin: 1.5rem;
+            font-size: 1.1rem;
+            color: #fff;
+            background-color: #40b736;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1f9405;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #40b736;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .about h1 {
+                font-size: 2.2rem;
+            }
+
+            .about p {
+                font-size: 1rem;
+            }
+
+            .about-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-img {
+                width: 60%;
+                height: 60%;
+                margin-bottom: 1rem;
+            }
+
+            .about-info p {
+                margin: 1rem 2rem;
+            }
+
+            .about-info button {
+                margin: 1rem 2rem;
+                width: 12rem;
+            }
+            .avatar {
+                vertical-align: middle;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+              }
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo" onclick="window.location.href='/'">
+                ToDo Application
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About Our ToDo Application</h1>
+        <p style="font-weight: bold">
+            Welcome to the About page for our TODO Application built with Django!
+        </p>
+        <div class="about-info">
+            <div class="about-img">
+                <img src="" alt="TODO Application">
+                
+            </div>
+            <div>
+                <p>Our TODO Application is a simple yet powerful task management tool designed to help you stay organized and manage your tasks efficiently. Built using the Django framework, this application offers a clean and intuitive interface to create, manage, and track your to-do lists.
+
+                    With features like task prioritization, due dates, and user authentication, our TODO Application aims to streamline your workflow and boost your productivity. Whether you're managing personal tasks or collaborating with a team, this application is designed to meet your needs.
+
+                    Explore the features, try out the app, and see how it can help you get things done!
+                </p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TODO Application. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/sivasai-yarlagadda" target="_blank">GitHub</a> |
+            <a href="https://in.linkedin.com/in/sivasai-yarlagadda" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+
+</html>
